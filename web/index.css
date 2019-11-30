@@ -21,7 +21,9 @@ body {
 }
 
 .topnav-right {
+    position: relative;
     float: right;
+    z-index: 1;
 }
 
 .topnav-center {
@@ -49,11 +51,21 @@ a.topnav-item {
 }
 
 div.topnav-right img.searchbutton {
+    position: absolute;
+    top: 0.7rem;
+    right: 0.7rem;
     height: 1rem;
     width: 1rem;
+    padding: 0.3rem;
     margin-bottom: -1px;
     margin-left: -1rem;
-    display: none;
+    display:none;
+    cursor: pointer;
+}
+
+div.topnav-right img.searchbutton:hover {
+    background-color: rgb(50,50,50);
+    border-radius: 50%;
 }
 
 .topnav div.topnav-item {
@@ -71,11 +83,9 @@ div.topnav-right img.searchbutton {
     border-bottom: 1px solid white;
 }
 
-div.topnav-right:hover img.searchbutton,div.topnav-right:focus-within img.searchbutton {
+div.topnav-right:hover img.searchbutton,div.topnav-right:focus-within img.searchbutton,
+div.topnav-right:hover input,div.topnav-right:focus-within input {
     display: inline-block;
-}
-
-.topnav input:hover, .topnav input:active, .topnav input:focus{
     opacity: 1;
 }
 
