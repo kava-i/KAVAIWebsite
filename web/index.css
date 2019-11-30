@@ -38,6 +38,7 @@ body {
 
 .topnav-item {
     padding: 1rem;
+    margin: 0 auto;
     display: inline-block;
     text-align: center;
 }
@@ -47,13 +48,35 @@ a.topnav-item {
     text-decoration: underline;
 }
 
+div.topnav-right img.searchbutton {
+    height: 1rem;
+    width: 1rem;
+    margin-bottom: -1px;
+    margin-left: -1rem;
+    display: none;
+}
+
+.topnav div.topnav-item {
+    padding-bottom: calc( 1rem - 1px);
+}
+
 .topnav input{
-    width: 20rem;
+    position: relative;
+    width: calc(100%);
+    padding: 0;
     background-color: rgba(0,0,0,0);
     opacity: 0.6;
     color: white;
     border: 0;
-    border-bottom: 2px solid white;
+    border-bottom: 1px solid white;
+}
+
+div.topnav-right:hover img.searchbutton,div.topnav-right:focus-within img.searchbutton {
+    display: inline-block;
+}
+
+.topnav input:hover, .topnav input:active, .topnav input:focus{
+    opacity: 1;
 }
 
 .bold {
